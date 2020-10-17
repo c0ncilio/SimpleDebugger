@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="linudis86">
+      <UniqueIdentifier>{635fcdd6-8929-4bc1-9ebf-d8305e960604}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\udis86.h" />
+    <ClInclude Include="..\..\deps\libudis86\decode.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\libudis86\extern.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\libudis86\itab.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\libudis86\syn.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\libudis86\types.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\libudis86\udint.h">
+      <Filter>linudis86</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\libudis86\decode.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libudis86\itab.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libudis86\syn.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libudis86\syn-att.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libudis86\syn-intel.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\libudis86\udis86.c">
+      <Filter>linudis86</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

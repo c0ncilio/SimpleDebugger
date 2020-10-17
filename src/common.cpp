@@ -80,3 +80,29 @@ BOOL GetFileNameFromHandle(HANDLE hFile, LPSTR lpFileName, DWORD dwSize)
 
     return bRet;
 }
+
+BOOL IsProcess32Bit(DWORD dwProcessId, PBOOL pbIs32Bit)
+{
+    HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, dwProcessId);
+    BOOL bResult = FALSE;
+
+    if (hProcess)
+    {
+        BOOL Wow64Process = FALSE;
+        if (IsWow64Process(hProcess, &Wow64Process))
+        {
+            *pbIs32Bit = Wow64Process;
+            bResult = TRUE;
+        }
+        else
+        {
+            dprintf(DEBUG_ERROR, "error: get process bits (%d)", GetLastError());
+        }
+        CloseHandle(hProcess);
+    }
+    else
+    {
+        dprintf(DEBUG_ERROR, "error: open process (%d)", GetLastError());
+    }
+    return bResult;
+}
